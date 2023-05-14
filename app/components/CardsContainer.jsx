@@ -5,7 +5,7 @@ export default function CardsContainer() {
   const {stays,isLoading} = useStays();
   console.log(stays);
   return (
-    <div className="flex flex-col p-3">
+    <div className="grid grid-cols-1 lg:grid-cols-4 gap-2 p-3">
         {isLoading ? "Cargando" : stays.map((stay,index) => <Card key={index} stay={stay}></Card>)}
     </div>
   )

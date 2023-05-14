@@ -6,8 +6,8 @@ export default function Card({stay}) {
    
     return (
         <article className={"rounded-lg font-thin"+ montserrat.className}>
-            <div className="">
-                <img src={stay.photo} className="rounded-lg"></img>
+            <div className="w-100 h-fit">
+                <img src={stay.photo} className="rounded-lg aspect-square object-cover w-full h-60"></img>
             </div>
             <div className="mt-3">
                 <div>
