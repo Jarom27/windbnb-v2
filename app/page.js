@@ -1,9 +1,7 @@
-import CardsContainer from './components/CardsContainer'
+import Content from './components/Content'
 
 export default async function Home() {
   return (
-    <main>
-      <CardsContainer></CardsContainer>
-    </main>
+    <Content></Content>
   )
 }
