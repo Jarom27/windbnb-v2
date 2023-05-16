@@ -14,7 +14,8 @@ export default function CardsContainer() {
   },[stays])
   useEffect(()=>{
     setDatos(stays)
-    setDatos(datos.filter(stay => stay.city.toLowerCase().includes(filtro.toLowerCase()) || stay.maxGuest <= maxGuess))
+    console.log(maxGuess)
+    setDatos(datos.filter(stay => stay.city.toLowerCase().includes(filtro.toLowerCase()) && stay.maxGuest <= maxGuess))
     // else{
     //   setDatos(stays)
     //   setFiltered(false)
@@ -30,6 +31,7 @@ export default function CardsContainer() {
       </div>
       <div className="grid grid-cols-1 lg:grid-cols-3 gap-3 p-3">
         {isLoading ? "Cargando" : datos.map((stay,index) => <Card key={index} stay={stay}></Card>)}
+        {datos.length == 0 && !isLoading? "Sin coincidencias" : ""}
       </div>
     </>
     

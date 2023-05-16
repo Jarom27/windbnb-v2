@@ -20,7 +20,7 @@ export default function Header() {
           
       </Modal>}
       <header className="flex flex-col justify-center container p-4 lg:flex-row lg:align-middle lg:justify-between">
-          <div className="flex flex-col justify-center">
+          <div className="">
               <img src="./images/logo.png"></img>
           </div>
           <SearchBar locationEvent = {handlerLocationInput} guessEvent = {handleGuessInput}></SearchBar>
